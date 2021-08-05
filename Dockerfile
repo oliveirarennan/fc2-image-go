@@ -4,7 +4,7 @@ WORKDIR /usr/src/app
 
 COPY . .
 
-RUN go build ./app.go
+RUN go build -ldflags "-s -w" ./app.go
 
 FROM scratch
 
